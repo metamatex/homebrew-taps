@@ -2,21 +2,20 @@
 class Metactl < Formula
   desc ""
   homepage "https://metamate.io"
-  version "0.0.8"
+  version "0.0.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metamatex/metamatemono/releases/download/v0.0.8/metamate_0.0.8_Darwin_x86_64.tar.gz"
-    sha256 "6cb7baf7b5a5200d03f85efe77f1c401b68a595afe44d818c6acc80342be0dd1"
+    url "https://github.com/metamatex/metamatemono/releases/download/v0.0.9/metamate_0.0.9_Darwin_x86_64.tar.gz"
+    sha256 "254f14ea39cdec5e903f4930424b46a592f1e3ecc10223b396f02e457a58d10e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/metamatex/metamatemono/releases/download/v0.0.8/metamate_0.0.8_Linux_x86_64.tar.gz"
-      sha256 "c518b89a94bce175fe85158dd7108e36b0e225fa381e9ca1200501c2c80ab857"
+      url "https://github.com/metamatex/metamatemono/releases/download/v0.0.9/metamate_0.0.9_Linux_x86_64.tar.gz"
+      sha256 "a2c76e59e2dcb9517f4ef593fe3e4b5e40339a08ccd575a188446023a8150604"
     end
   end
 
   def install
     bin.install "metactl"
-    bin.install "metamate"
   end
 end
