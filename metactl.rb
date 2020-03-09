@@ -2,12 +2,12 @@
 class Metactl < Formula
   desc ""
   homepage "https://metamate.io"
-  version "0.0.28"
+  version "0.0.29"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metamatex/metamatemono/releases/download/v0.0.28/metactl_0.0.28_Darwin_x86_64.tar.gz"
-    sha256 "8410495a2c510d14e0af7554fe83c7b428f70abfbf450336104d6ceea2e60203"
+    url "https://github.com/metamatex/metamatemono/releases/download/v0.0.29/metactl_0.0.29_Darwin_x86_64.tar.gz"
+    sha256 "badac7e5ea6fea57a638dd7c874c026ae7eb83d777fc8098f9cd40162ceffac8"
   elsif OS.linux?
   end
 
