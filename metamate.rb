@@ -2,13 +2,26 @@
 class Metamate < Formula
   desc ""
   homepage "https://metamate.io"
-  version "0.0.51"
+  version "0.0.53"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metamatex/metamate/releases/download/v0.0.51/metamate_0.0.51_darwin_amd64.tar.gz"
-    sha256 "6ad076875b0b4e2b7ae6d7d92db238cddc8a580233bbe01cf9ee670b353c0ca7"
+    url "https://github.com/metamatex/metamate/releases/download/v0.0.53/metamate_0.0.53_darwin_amd64.tar.gz"
+    sha256 "eb66affb4a550a15e3501216fe0a35323a3953483d1907dad74d83577458b1cc"
   elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/metamatex/metamate/releases/download/v0.0.53/metamate_0.0.53_linux_amd64.tar.gz"
+      sha256 "1bdb169bc9ab05ae48135af638f5489b8b4ff13e490ceebd51df37ba48b71a1c"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/metamatex/metamate/releases/download/v0.0.53/metamate_0.0.53_linux_arm64.tar.gz"
+        sha256 "1740714e075096bb6739b2173c07eb1130769f8a9313312004a701c060b3f13f"
+      else
+        url "https://github.com/metamatex/metamate/releases/download/v0.0.53/metamate_0.0.53_linux_armv6.tar.gz"
+        sha256 "a0cccc2a425d41b2374e5df8545c0dc04c981e0be3645314a81eba36620a47f5"
+      end
+    end
   end
 
   def install
