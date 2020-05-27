@@ -2,24 +2,24 @@
 class Metactl < Formula
   desc ""
   homepage "https://metamate.io"
-  version "0.0.65"
+  version "0.0.66"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/metamatex/metamate/releases/download/v0.0.65/metactl_0.0.65_darwin_amd64.tar.gz"
-    sha256 "fafcdca257ab879f1270999f3ef1f2bc78f5208489f1fa544a57e0e67b7645b6"
+    url "https://github.com/metamatex/metamate/releases/download/v0.0.66/metactl_0.0.66_darwin_amd64.tar.gz"
+    sha256 "2bf8724eeb3c34abd1d30dafede032bee05dd9184a9ed863a636e6ba71e1a398"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/metamatex/metamate/releases/download/v0.0.65/metactl_0.0.65_linux_amd64.tar.gz"
-      sha256 "b6d35a7b4f9b51b91367b415e09a1e5cc5ab36dded80f5fe8c02487c09a896e5"
+      url "https://github.com/metamatex/metamate/releases/download/v0.0.66/metactl_0.0.66_linux_amd64.tar.gz"
+      sha256 "8a1e52c406a9cd980a78401fc78349c44f02f379f771b3a8d8a33e13cfedbe42"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/metamatex/metamate/releases/download/v0.0.65/metactl_0.0.65_linux_arm64.tar.gz"
-        sha256 "dd99ca39e10ed05a5b0332f5a07c78fb882b7d25a978ef942d0850c1e0f50441"
+        url "https://github.com/metamatex/metamate/releases/download/v0.0.66/metactl_0.0.66_linux_arm64.tar.gz"
+        sha256 "e12eeb9e74a0cb7c0e46b4b0affa3aeab69d3c402c827d83889a39225235b3d9"
       else
-        url "https://github.com/metamatex/metamate/releases/download/v0.0.65/metactl_0.0.65_linux_armv6.tar.gz"
-        sha256 "98cd7a57e197596b1cc4b35e7f8618afb43bfd51b330ccc22e53d63c334bc03a"
+        url "https://github.com/metamatex/metamate/releases/download/v0.0.66/metactl_0.0.66_linux_armv6.tar.gz"
+        sha256 "0ce5c303f66e1b53ac6e1dcb8e5230f684c0091d4d39a733132a06ec2800ffed"
       end
     end
   end
